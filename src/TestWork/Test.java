@@ -38,7 +38,6 @@ public class Test {
         LXXXI, LXXXII, LXXXIII, LXXXIV, LXXXV, LXXXVI, LXXXVII, LXXXVIII, LXXXIX, XC,
         XCI, XCII, XCIII, XCIV, XCV, XCVI, XCVII, XCVIII, XCIX, C;
     }
-
     public static <length> String calc(String input) throws IOException {
         String[] parts = input.split("\\+|-|\\*|/");
         String returnStr = new String();
