@@ -12,9 +12,8 @@ public class Test {
         try {
             System.out.println(calc(input));
         }catch (IOException e){
-            System.out.print("ERROR!! ");
+            System.out.print("Не верные исходные данные!! ");
         }
-
     }
 
     enum RomeNumber{
@@ -24,8 +23,6 @@ public class Test {
             this.arabicNumber = arabicNumber;
         }
     }
-
-
     enum ArabicToRomeNumber{
         I,II, III, IV, V, VI, VII, VIII, IX, X,
         XI, XII, XIII, XIV, XV, XVI, XVII, XVIII, XIX, XX,
@@ -51,7 +48,7 @@ public class Test {
                     Integer partsOne = Integer.parseInt(parts[0]);
                     Integer partsTwo = Integer.parseInt(parts[1]);
 
-                    if (partsOne==0 | partsOne>10 | partsTwo==0 | partsTwo>10) throw new IOException();
+                    if (partsOne<=0 | partsOne>10 | partsTwo<=0 | partsTwo>10) throw new IOException();
 
                     switch (input.charAt(parts[0].length())){
                         case ('+'):
@@ -98,12 +95,6 @@ public class Test {
                 }
             } catch (IndexOutOfBoundsException e){ throw new IOException();}
         }
-
-
-
-
-
-
         return returnStr;
     }
 
@@ -120,6 +111,4 @@ public class Test {
             return false;
         }
     }
-
-
 }
